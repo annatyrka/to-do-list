@@ -16,8 +16,8 @@ html {
   --pink: #df68b7;
   --grey: rgb(236, 236, 236);
   --dark-grey: rgb(129, 129, 129);
-  --green: #e3f5e6;
-  --dark-green: #86bd8f;
+  --green: #d6fdee;
+  --dark-green: #47d1aa;
 }
 
 /*  --- wrapper --- */
@@ -32,7 +32,7 @@ html {
   opacity: 1;
   position: relative;
   border-radius: 15px;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .wrapper > * {
@@ -56,7 +56,7 @@ body::before {
 /*  --- input form --- */
 #input-form {
   width: 60%;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 
@@ -86,12 +86,12 @@ h1 {
 /*  --- buttons --- */
 
 .main-btns {
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 
 .main-btns button {
   height: 2.75rem;
-  width: 12rem;
+  width: 14rem;
   margin: 0.5rem;
   border-radius: 10px;
   color: white;
@@ -125,6 +125,7 @@ h1 {
   width: 80%;
   font-size: larger;
   margin: 0 auto;
+  padding-top: 1.5rem;
 }
 
 /*  --- task to do --- */
@@ -194,4 +195,58 @@ ul i {
   display: block;
   margin-top: 1.5rem;
   color: rgb(46, 44, 44);
+}
+
+/*  --- progress bar --- */
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  height: 30px;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.progress-done {
+  border-radius: 20px;
+  background-color: #7cffcb;
+  background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+  box-shadow: 0 3px 3px -5px #7cffcb, 0 2px 5px #74f2ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  color: grey;
+}
+
+/*inear-gradient(120deg, #ff9472, #df68b7) */
+
+@media screen and (max-width: 1076px) {
+  html {
+    font-size: 2.75rem;
+  }
+  .wrapper {
+    margin: 2.75rem auto;
+  }
+  #input-form {
+    width: 85%;
+    text-align: center;
+  }
+  #main-list {
+    width: 85%;
+  }
+  p {
+    margin-left: 0;
+  }
+  .relax-banner {
+    width: 70%;
+    text-align: center;
+  }
+  .progress {
+    width: 80%;
+    height: 2.25rem;
+  }
 }

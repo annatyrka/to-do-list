@@ -3,10 +3,39 @@ const addButton = document.getElementById("add");
 const clearButton = document.getElementById("clear-all");
 const listUl = document.getElementById("to-do-list");
 const listSection = document.getElementById("main-list");
+const progress = document.querySelector(".progress-done");
 
+
+// progrss bar % of completion
+
+function liCompleted() {
+    const progress = document.querySelector(".progress-done");
+    let liNumber = listUl.children.length;
+    liDone = 0;
+    for (let li =0; li<listUl.children.length; li++) {
+        if (listUl.children[li].children[1].children[0].classList.contains("fa-check-circle")) {
+            liDone ++;
+        }
+    }
+
+    let curProgress = Math.round(liDone/liNumber*100);
+    progress.setAttribute("data-done",curProgress);
+
+progress.innerHTML = curProgress +"%";
+if (curProgress === 0) {
+    progress.innerHTML = "";
+}
+     
+    setTimeout(() => {
+    progress.style.opacity = 1;
+    progress.style.width = progress.getAttribute("data-done") + "%";
+         }, 300)
+
+}
 
 //adding an item 
 const addItems = addButton.onclick = (() => {
+    
     let li = document.createElement("li");
     li.classList.add('list-item');
     li.innerHTML = `<p contenteditable="true"> ${userInput.value}</p>
@@ -15,6 +44,7 @@ const addItems = addButton.onclick = (() => {
     `
     listUl.appendChild(li);
     relaxBanner();
+    liCompleted();
 
 });
 
@@ -28,12 +58,30 @@ function relaxBanner() {
           <h3>Nothing to do so far - you can relax</h3>
           <i class="fas fa-couch"></i>`
         listSection.appendChild(div);
+
+        // remove progress bar
+        const progressBar = document.querySelector(".progress");
+        document.querySelector(".wrapper").removeChild(progressBar);
         
     }
-    else if (listUl.children.length === 1 && listSection.children.length === 2) {     
+    else if (listUl.children.length === 1 && listSection.children.length === 2) {    
+        
+        //remove relax banner
         const div = document.querySelector('.relax-banner');
-        console.log(div);
-        listSection.removeChild(div)      
+        listSection.removeChild(div)
+
+        // add progress bar
+        const progressBar = document.createElement("div");
+        progressBar.classList.add("progress");
+        progressBar.innerHTML =`
+        <div class="progress-done" data-done="0">
+      
+      </div>
+        `
+        //document.querySelector(".wrapper").appendChild(progressBar);
+        
+        document.querySelector(".wrapper").insertBefore(progressBar,listSection);
+        liCompleted()
         }
 }
 
@@ -78,11 +126,8 @@ listUl.addEventListener('click', event => {
         parElem.style.color = "var(--dark-grey)";
         
         }
-
-
     }
     relaxBanner();
+    liCompleted()
 })
-
-
 
