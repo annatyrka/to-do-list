@@ -7,8 +7,8 @@
 /* background-image: linear-gradient(to right, #eaee44, #33d0ff);*/
 
 html {
-  font-family: "Hind Madurai", sans-serif;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 :root {
   --purple: #595ad4;
@@ -22,17 +22,19 @@ html {
 
 /*  --- wrapper --- */
 .wrapper {
-  max-width: 1050px;
+  max-width: 850px;
   width: 100%;
   min-height: 80vh;
   height: 100%;
   margin: 5rem auto;
   z-index: 10;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.993);
   opacity: 1;
   position: relative;
   border-radius: 15px;
   padding-bottom: 3rem;
+  box-shadow: inset -1px 3px 8px 5px rgba(255, 255, 255, 0.993),
+    2px 5px 16px 0px #8a8afc, 7px 10px 6px 1px rgba(138, 138, 252, 0);
 }
 
 .wrapper > * {
@@ -55,7 +57,7 @@ body::before {
 }
 /*  --- input form --- */
 #input-form {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   padding-top: 2rem;
 }
@@ -152,7 +154,7 @@ p {
   line-height: 2.75rem;
   padding-left: 1rem;
   vertical-align: middle;
-  margin-left: 9rem;
+  margin-left: 6.25rem;
 }
 
 .completed,
@@ -182,7 +184,7 @@ ul i {
 
 .relax-banner {
   height: 25vh;
-  width: 25vw;
+  max-width: 35vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
