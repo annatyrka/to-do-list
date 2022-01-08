@@ -12,10 +12,8 @@ html {
 }
 :root {
   --main-blue: #3ca6db;
-  --purple: #3ca6db;
-  --light-purple: #9cdaf8;
+  --light-blue: #9cdaf8;
   --pink: #f758d4;
-
   --grey: rgb(236, 236, 236);
   --dark-grey: rgb(87, 83, 83);
   --green: #d6fdee;
@@ -29,10 +27,9 @@ html {
   min-height: 80vh;
   height: 100%;
   margin: 5rem auto;
+  position: relative;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.85);
-  opacity: 1;
-  position: relative;
   border-radius: 15px;
   padding-bottom: 3rem;
 }
@@ -47,10 +44,10 @@ body::before {
   top: 0;
   left: 0;
   z-index: 0;
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 /*  --- input form --- */
 #input-form {
   width: 80%;
@@ -106,7 +103,7 @@ h1 {
 
 #add:hover {
   cursor: pointer;
-  background-color: var(--light-purple);
+  background-color: var(--light-blue);
   transition: background-color 0.5s;
 }
 
@@ -189,6 +186,7 @@ ul i {
   justify-content: flex-start;
   align-items: center;
   color: var(--dark-grey);
+  text-align: center;
 }
 
 .fa-couch {
@@ -262,19 +260,19 @@ ul i {
     font-size: 1.75rem;
   }
   .list-item {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   p {
-    max-width: 85%;
+    max-width: 70%;
     line-height: 6.5rem;
     padding-left: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-left: 1.25rem;
   }
   .completed,
   .remove {
-    font-size: 3rem;
-    margin-left: 1rem;
+    font-size: 3.5rem;
+    margin-left: 2rem;
   }
   .relax-banner {
     max-width: 95vw;
