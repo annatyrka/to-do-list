@@ -55,7 +55,7 @@ function relaxBanner() {
         const div = document.createElement("div");
         div.classList.add("relax-banner");
         div.innerHTML = `
-          <h3>Nothing to do so far - you can relax</h3>
+          <h3>Nothing to do - you can relax</h3>
           <i class="fas fa-couch"></i>`
         listSection.appendChild(div);
 
@@ -109,10 +109,10 @@ listUl.addEventListener('click', event => {
         if (event.target.classList.contains("fa-check-circle")) {
         event.target.classList.remove("fa-check-circle");
         event.target.classList.add("fa-circle");
-        event.target.style.color = "var(--purple)";
+        event.target.style.color = "var(--dark-grey)";
         const parElem = event.target.parentElement.previousSibling.previousSibling;
         parElem.style.backgroundColor = "var(--grey)";
-        parElem.style.borderLeft = "var(--purple) 3px solid";
+        parElem.style.borderLeft = "var(--dark-grey) 3px solid";
         parElem.style.color = "inherit";     
         }
 
