@@ -137,6 +137,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-top: 1rem;
   position: relative;
 }
@@ -258,6 +259,9 @@ ul i {
     height: 4rem;
     width: 85%;
     font-size: 1.75rem;
+  }
+  #main-list {
+    margin: 0 auto;
   }
   .list-item {
     margin-top: 2.5rem;
