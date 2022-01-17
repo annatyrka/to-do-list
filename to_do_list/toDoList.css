@@ -84,12 +84,16 @@ h1 {
 
 .main-btns {
   margin-top: 1rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.75rem;
 }
 
 .main-btns button {
-  height: 2.75rem;
-  width: 14rem;
-  margin: 0.5rem;
+  height: 2.5rem;
+  /* max-width: 10rem; */
+  width: 100%;
   border-radius: 10px;
   color: white;
   font-size: 1rem;
@@ -222,9 +226,9 @@ ul i {
   color: grey;
 }
 
-@media only screen and (max-device-width: 576px) {
+@media only screen and (max-device-width: 600px) {
   .wrapper {
-    max-width: 500px;
+    max-width: 550px;
     min-height: 85vh;
     border-radius: 0;
   }
@@ -244,20 +248,18 @@ ul i {
 
   #input {
     max-width: 95%;
-    height: 3.5rem;
+    height: 3rem;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
   }
 
   .main-btns {
-    width: 100%;
+    width: 95%;
   }
 
   .main-btns button {
-    height: 3.5rem;
-    width: 95%;
-    font-size: 1.25rem;
-    margin: 0.25rem 0.5rem;
+    height: 3rem;
+    font-size: 1rem;
   }
 
   .progress {
