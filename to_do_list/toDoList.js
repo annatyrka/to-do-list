@@ -55,7 +55,7 @@ function relaxBanner() {
         const div = document.createElement("div");
         div.classList.add("relax-banner");
         div.innerHTML = `
-          <h3>Nothing to do - relax</h3>
+          <h3>Nothing to do</h3>
           <i class="fas fa-couch"></i>`
         listSection.appendChild(div);
 
