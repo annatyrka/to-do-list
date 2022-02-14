@@ -224,6 +224,7 @@ ul i {
   opacity: 0;
   transition: 0.5s ease;
   color: grey;
+  font-weight: 500;
 }
 
 @media only screen and (max-device-width: 600px) {
